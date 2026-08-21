@@ -1,58 +1,57 @@
 # Bitcoin ETF Sentiment Analysis
 
-Proyecto de análisis de sentimiento financiero desarrollado en Python utilizando noticias relacionadas con Bitcoin ETFs.
+Análisis exploratorio de noticias sobre Bitcoin ETFs para estudiar la evolución del sentimiento, los eventos asociados a sus principales variaciones y los términos característicos de cada período.
 
-El objetivo fue analizar cómo el sentimiento de mercado evolucionó a lo largo del tiempo mediante técnicas de NLP, identificando tendencias, eventos relevantes y posibles impactos en la percepción del mercado cripto.
+## Objetivo de negocio
 
-## Tools & Technologies
+Convertir un conjunto de noticias no estructuradas en indicadores que permitan responder:
 
-- Python
-- NLP
-- VADER Sentiment Analysis
-- TextBlob
-- Pandas
-- Matplotlib
-- WordCloud
-- TF-IDF
-- Web Scraping
+- ¿Cómo evolucionó el sentimiento del mercado?
+- ¿Qué eventos coincidieron con los mayores cambios?
+- ¿Qué temas caracterizaron las noticias positivas y negativas?
+- ¿Cómo varió el tratamiento entre fuentes?
 
-## Project Pipeline
+## Metodología
 
-1. News scraping from Google News
-2. Data cleaning and preprocessing
-3. Sentiment analysis using VADER and TextBlob
-4. Weighted sentiment scoring
-5. Trend visualization and interpretation
-6. Keyword extraction using TF-IDF
-7. Market insight generation
+1. Recolección de noticias desde Google News.
+2. Limpieza y normalización del texto.
+3. Clasificación con VADER y TextBlob.
+4. Construcción de un indicador combinado de sentimiento.
+5. Análisis temporal y detección de picos.
+6. Extracción de términos relevantes mediante TF-IDF.
+7. Interpretación de resultados y limitaciones.
 
-## Business Questions
+## Tecnologías
 
-- ¿Cómo evolucionó el sentimiento del mercado respecto a los Bitcoin ETFs?
-- ¿Qué eventos generaron los mayores picos positivos y negativos?
-- ¿Qué palabras y temas aparecieron con mayor frecuencia en noticias positivas y negativas?
-- ¿Cómo cambió la percepción del mercado a lo largo del tiempo?
+`Python` · `Pandas` · `VADER` · `TextBlob` · `TF-IDF` · `Matplotlib` · `WordCloud`
 
-## Key Insights
+## Principales hallazgos
 
-- Los anuncios regulatorios generaron los mayores cambios de sentimiento en el mercado.
-- Reuters y Bloomberg mostraron mayor consistencia en noticias neutrales comparado con otras fuentes.
-- Los picos positivos coincidieron con eventos relacionados a aprobación de ETFs y adopción institucional.
-- El sentimiento negativo estuvo fuertemente asociado a incertidumbre regulatoria y volatilidad del mercado.
+- Los mayores movimientos del indicador coincidieron con noticias regulatorias.
+- Los períodos positivos estuvieron asociados con aprobaciones de ETFs y adopción institucional.
+- La incertidumbre regulatoria y la volatilidad dominaron los períodos negativos.
+- Las diferencias entre fuentes sugieren que el medio de publicación debe considerarse al interpretar el score.
 
-## Visualizaciones
+> Los scores representan señales lingüísticas, no recomendaciones de inversión ni una medición causal del mercado.
 
-<img width="665" height="537" alt="Sentimiento 1" src="https://github.com/user-attachments/assets/5bb24a00-afda-41fe-962b-c3fa17be1038" />
+## Contenido
 
-<img width="957" height="459" alt="Sentimiento 19" src="https://github.com/user-attachments/assets/b3b5f92d-52cd-4ee0-b332-0023915acb94" />
+- [Notebook completo](./Trabajo%20Final%20Obligatorio%20Data%20Science%20en%20Inversiones.ipynb)
 
-<img width="1493" height="317" alt="Sentimiento 9" src="https://github.com/user-attachments/assets/12f67463-1239-4702-8f20-015626ae8a09" />
+El notebook contiene la preparación de datos, el análisis, las visualizaciones y las conclusiones. Actualmente el repositorio funciona como entrega analítica reproducible desde el notebook; una próxima mejora será separar dependencias, datos y código de extracción.
 
-<img width="1141" height="711" alt="Sentimiento 8" src="https://github.com/user-attachments/assets/a022a300-f0a3-4384-afa2-b12c28d62ba7" />
+## Vista previa
 
-<img width="685" height="396" alt="Sentimiento 6" src="https://github.com/user-attachments/assets/103a94d3-89cd-4f12-a3f4-167ff12be17f" />
+![Evolución del sentimiento](https://github.com/user-attachments/assets/b3b5f92d-52cd-4ee0-b332-0023915acb94)
 
-<img width="1409" height="619" alt="Sentimiento 4" src="https://github.com/user-attachments/assets/204e1fb8-0210-4684-aa53-8a7687feef47" />
+![Términos relevantes](https://github.com/user-attachments/assets/103a94d3-89cd-4f12-a3f4-167ff12be17f)
 
-<img width="1363" height="364" alt="Sentimiento 3" src="https://github.com/user-attachments/assets/b4e07f37-3c45-4190-9c3f-788b19ae77c6" />
+## Limitaciones
 
+- Los modelos léxicos pueden fallar ante contexto, ironía y negaciones complejas.
+- La cobertura depende de las noticias recuperadas y de sus fuentes.
+- La coincidencia temporal entre una noticia y un cambio de sentimiento no implica causalidad.
+
+## Autora
+
+**Sofía González Semper** — Data Analytics, operaciones y mejora de procesos.
